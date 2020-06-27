@@ -12,20 +12,20 @@ let boxArray = [
 ];
 const generateBox = (input) => {
     input.forEach(function(item) {
-        document.getElementById("boxContainer").innerHTML += '<div ' + item.bgColor + 'class=\"col-sm-4 col-xs-12 box\">' +  '<div class=\"boxText d-flex align-items-center align-self-center justify-content-center"\>' + item.text +'</div></div>';
+        document.getElementById("boxContainer").innerHTML += '<div ' + item.bgColor + 'class=\"box\">' +  '<div class=\"boxText"\>' + item.text +'</div></div>';
     });
 };
 const shuffle = (input) => {
-    const updated = _.shuffle(input);
+    const updated = input.sort(() => Math.random() - .5);
     document.getElementById("boxContainer").innerHTML = "";
     updated.forEach(function(item) {
-        document.getElementById("boxContainer").innerHTML += '<div ' + item.bgColor + 'class=\"col-sm-4 col-xs-12 box\">' +  '<div class=\"boxText d-flex align-items-center align-self-center justify-content-center"\>' + item.text +'</div></div>';
+        document.getElementById("boxContainer").innerHTML += '<div ' + item.bgColor + 'class=\"col-sm-4 col-xs-12 box\">' +  '<div class=\"boxText"\>' + item.text +'</div></div>';
     });
 };
 const sort = (input) => {
-    const updated = _.sortBy(input, ['text']);
+    const updated = input.sort((a,b) => a.text - b.text);
     document.getElementById("boxContainer").innerHTML = "";
     updated.forEach(function(item) {
-        document.getElementById("boxContainer").innerHTML += '<div ' + item.bgColor + 'class=\"col-sm-4 col-xs-12 box\">' +  '<div class=\"boxText d-flex align-items-center align-self-center justify-content-center"\>' + item.text +'</div></div>';
+        document.getElementById("boxContainer").innerHTML += '<div ' + item.bgColor + 'class=\"col-sm-4 col-xs-12 box\">' +  '<div class=\"boxText"\>' + item.text +'</div></div>';
     });
 };

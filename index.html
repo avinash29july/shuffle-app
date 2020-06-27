@@ -1,43 +1,30 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <title>Shuffle and Sort App</title>
+    </head>
+    <body onload="generateBox(boxArray)">
+        <nav class="navbar">
+            <h5>Shuffle and Sort</h5>
+        </nav>
+        <div class="container">
+            <div class="desktop">
+                <div class="cubicBox" id="boxContainer">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-
-    <title>Shuffle and Sort App</title>
-</head>
-<body onload="generateBox(boxArray)">
-<nav class="navbar navbar-expand-lg shadow">
-    <div class="container-fluid container-fluid-custom">
-        <h5>Shuffle and Sort</h5>
-    </div>
-</nav>
-<div class="container">
-    <div class="row">
-        <div class="col-md-9 col-sm-12 col-xs-12 order-last order-sm-last order-md-first">
-            <div class="row gx-sm-2 g-2 g-md-0" id="boxContainer">
-
-            </div>
-
-
-        </div>
-        <div class="col-md-3 col-sm-12 col-xs-12 order-sm-first order-md-last order-first">
-            <div class="row">
-                <div class="col-md-12 btnBox">
-                    <button type="button" onclick="shuffle(boxArray)" class="btn shadow-custom btn-custom btn-lg">Shuffle</button>
-                    <button type="button" onclick="sort(boxArray)" class="btn shadow-custom btn-custom btn-lg">Sort</button>
+                </div>
+                <div class="buttonBox">
+                    <button class="btn-custom" onclick="shuffle(boxArray)" type="button">Shuffle</button>
+                    <button class="btn-custom" onclick="sort(boxArray)" type="button">Sort</button>
                 </div>
             </div>
-
+            <div class="footer">
+                <h5>Shuffle and sort by Avinash Kumar</h5>
+            </div>
         </div>
-    </div>
-</div>
-<script src="js/script.js"></script>
-<script src="js/lodash.js"></script>
-</body>
+        <script src="js/script.js"></script>
+    </body>
 </html>
